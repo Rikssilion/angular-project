@@ -4,4 +4,8 @@
 <app-skills></app-skills>
 <app-contact></app-contact>
 <app-about [aboutList]="aboutList"></app-about>
+<!-- <h1>{{ title }}</h1> -->
+<p>Сегодняшняя дата: {{ currentDate | date:'fullDate' }}</p>
 
+<p>Обычный текст: {{ sampleText }}</p>
+<p>Перевёрнутый текст: {{ sampleText | reverse }}</p>

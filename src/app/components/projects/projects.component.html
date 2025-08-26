@@ -1,6 +1,15 @@
 <section class="projects">
   <h2>Мои проекты</h2>
-  
+  <section class="projects">
+  <h2>Проекты</h2>
+  <button (click)="loadProjects()">Загрузить проекты</button>
+  <ul>
+    <li *ngFor="let project of projects">
+      {{ project.title }}
+    </li>
+  </ul>
+
+
   <div class="project-card" *ngFor="let project of projects; let i = index"
        [ngStyle]="{
          'background-color': i % 2 === 0 ? '#f0f8ff' : '#ffe4e1',

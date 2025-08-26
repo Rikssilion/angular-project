@@ -7,6 +7,7 @@ import { AboutComponent } from "./components/about/about.component";
 import { HeaderComponent } from "./components/header/header.component";
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { ReversePipe } from './reverse.pipe';
 
 @Component({
   selector: 'app-root',
@@ -17,19 +18,22 @@ import { CommonModule } from '@angular/common';
     ProjectsComponent,
     AboutComponent,
     HeaderComponent,
-    CommonModule,   
-    FormsModule
-  ],
+    CommonModule,
+    FormsModule,
+    ReversePipe
+],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'my-angular18-app';
+  // title = 'my-angular18-app';
   aboutList = [
     { title: 'Обо мне', content: 'Привет! Я учусь работать с Angular. Это мой первый учебный проект.' },
     { title: 'Мои навыки', content: 'Я начинающий разработчик, изучаю TypeScript, Angular и Frontend-разработку.' },
     { title: 'Цели', content: 'Моя цель - стать профессионалом в области веб-разработки и работать с современными технологиями.' }
   ];
+  currentDate = new Date();
+  sampleText = 'Angular Pipes';
 }
 
 const routes: Routes = [

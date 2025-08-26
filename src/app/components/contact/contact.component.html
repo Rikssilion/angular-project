@@ -1,14 +1,21 @@
 <section class="contact">
   <h2>Контакты</h2>
+  <form [formGroup]="contactForm" (ngSubmit)="submitForm()">
 
-  <!-- Форма -->
-  <form *ngIf="!isSubmitted" (ngSubmit)="submitForm()">
-    <input type="text" placeholder="Ваше имя" required>
-    <input type="email" placeholder="Ваш email" required>
-    <textarea placeholder="Сообщение"></textarea>
+    <input type="text" placeholder="Ваше имя" formControlName="name">
+    <div *ngIf="contactForm.get('name')?.touched && contactForm.get('name')?.invalid" class="error">
+      Имя обязательно.
+    </div>
+
+    <input type="email" placeholder="Ваш email" formControlName="email">
+    <div *ngIf="contactForm.get('email')?.touched && contactForm.get('email')?.invalid" class="error">
+      <div *ngIf="contactForm.get('email')?.errors?.['required']">Email обязателен.</div>
+      <div *ngIf="contactForm.get('email')?.errors?.['email']">Некорректный email.</div>
+    </div>
+
+    <input type="text" placeholder="Тема" formControlName="subject">
+    <textarea placeholder="Сообщение" formControlName="message"></textarea>
+
     <button type="submit">Отправить</button>
   </form>
-
-  <!-- Сообщение после отправки -->
-  <p *ngIf="isSubmitted" class="success-msg">Спасибо! Ваше сообщение отправлено.</p>
 </section>
