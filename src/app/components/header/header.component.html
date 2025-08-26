@@ -1,9 +1,20 @@
 <header>
   <h1>Моё портфолио</h1>
   <nav>
-    <a href="#">Обо мне</a>
-    <a href="#">Проекты</a>
-    <a href="#">Навыки</a>
-    <a href="#">Контакты</a>
+    <a href="#" 
+       (click)="setActive('Обо мне')" 
+       [ngClass]="{ 'active-link': activeLink === 'Обо мне' }">Обо мне</a>
+
+    <a href="#" 
+       (click)="setActive('Проекты')" 
+       [ngClass]="{ 'active-link': activeLink === 'Проекты' }">Проекты</a>
+
+    <a href="#" 
+       (click)="setActive('Навыки')" 
+       [ngClass]="{ 'active-link': activeLink === 'Навыки' }">Навыки</a>
+
+    <a href="#" 
+       (click)="setActive('Контакты')" 
+       [ngClass]="{ 'active-link': activeLink === 'Контакты' }">Контакты</a>
   </nav>
 </header>

@@ -1,9 +1,17 @@
 <section class="skills">
   <h2>Навыки</h2>
   <ul>
-    <li>HTML & CSS</li>
-    <li>JavaScript</li>
-    <li>Angular</li>
-    <li>TypeScript</li>
+    <li *ngFor="let skill of skills">
+      {{ skill }}
+      
+     
+      <span [ngSwitch]="skill">
+        <span *ngSwitchCase="'HTML & CSS'"> — Основы верстки</span>
+        <span *ngSwitchCase="'JavaScript'"> — Язык программирования веб</span>
+        <span *ngSwitchCase="'Angular'"> — Фреймворк для SPA</span>
+        <span *ngSwitchCase="'TypeScript'"> — Строгая типизация для JS</span>
+        <span *ngSwitchDefault> — Другой навык</span>
+      </span>
+    </li>
   </ul>
 </section>

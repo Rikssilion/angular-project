@@ -1,4 +1,4 @@
-<section class="about">
-  <h2>Обо мне</h2>
-  <p>Привет! Я учусь работать с Angular. Это мой первый учебный проект.</p>
+<section class="about" *ngFor="let item of aboutList">
+  <h2>{{ item.title }}</h2>
+  <p>{{ item.content }}</p>
 </section>

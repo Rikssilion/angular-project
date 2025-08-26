@@ -1,7 +1,22 @@
+// .about {
+//   padding: 40px;
+//   background: #f5f5f5;
+//   text-align: center;
+//   border-radius: 12px;
+//   margin: 20px;
+// }
+.about-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .about {
-  padding: 40px;
-  background: #f5f5f5;
-  text-align: center;
-  border-radius: 12px;
-  margin: 20px;
+  background-color: #f5f5f5;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.highlight {
+  background-color: #e0f7fa;
 }

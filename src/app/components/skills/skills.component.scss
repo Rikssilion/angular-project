@@ -1,19 +1,15 @@
-.skills {
-  background: #eef6ff;
-  padding: 30px;
-  text-align: center;
 
+.skills {
   ul {
     list-style: none;
     padding: 0;
-
     li {
-      display: inline-block;
-      background: #4a90e2;
-      color: white;
-      margin: 5px;
-      padding: 10px 20px;
-      border-radius: 20px;
+      padding: 5px 0;
+      font-size: 16px;
+      span {
+        font-style: italic;
+        color: #555;
+      }
     }
   }
 }
